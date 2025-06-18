@@ -52,7 +52,10 @@ function App() {
         <div className="flex justify-between items-center h-18 py-3">
           
           {/* Enhanced Logo Section */}
-          <a href="#hero" className="flex items-center space-x-3 cursor-pointer group">
+          <button 
+            onClick={() => window.location.href = '/'} 
+            className="flex items-center space-x-3 cursor-pointer group bg-transparent border-none p-0"
+          >
             <div className="relative">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary-gray/30 to-secondary-gray/30 rounded-full blur-lg opacity-30 group-hover:opacity-50 transition duration-400"></div>
               <div className="relative bg-gradient-to-br from-gray-800/50 to-gray-900/70 backdrop-blur-sm rounded-full p-1 border border-primary-gray/30 shadow-xl group-hover:border-accent-silver/50 transition-all duration-400">
@@ -67,11 +70,11 @@ function App() {
               <span className="text-xl font-black bg-gradient-to-r from-white via-primary-gray to-accent-silver bg-clip-text text-transparent group-hover:from-accent-silver group-hover:via-white group-hover:to-primary-gray transition-all duration-400">
                 Neurino
               </span>
-              <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase">
-                Neural Revolution
-              </span>
-            </div>
-          </a>
+                             <span className="text-[10px] text-gray-400 font-medium tracking-wider uppercase">
+                 Neural Revolution
+               </span>
+             </div>
+           </button>
           
           {/* Enhanced Navigation Links */}
           <div className="hidden md:flex items-center space-x-6">
@@ -230,7 +233,7 @@ function App() {
            </div>
            
            {/* Enhanced CTA Section */}
-           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto">
+           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-lg mx-auto px-4">
             <div className="relative group w-full sm:w-auto">
               <div className="absolute -inset-1 bg-gradient-to-r from-primary-gray/50 to-accent-silver/50 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-300"></div>
               <button className="relative w-full sm:w-auto bg-gradient-to-r from-primary-gray to-accent-silver text-charcoal px-8 py-4 rounded-full font-bold text-lg opacity-50 cursor-not-allowed shadow-xl" disabled>
@@ -247,14 +250,16 @@ function App() {
             </div>
             
             <div className="relative group w-full sm:w-auto">
-              <button className="w-full sm:w-auto border-2 border-secondary-gray/50 text-secondary-gray px-8 py-4 rounded-full font-bold text-lg opacity-50 cursor-not-allowed hover:bg-secondary-gray/5 transition-all duration-300 shadow-lg" disabled>
+              <a
+                href="/Neurino_Whitepaper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto border-2 border-secondary-gray text-secondary-gray px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary-gray/10 hover:border-secondary-gray hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02]"
+              >
                 <span className="flex items-center justify-center gap-2">
                   📄 Whitepaper
                 </span>
-              </button>
-              <div className="absolute -top-2 -right-2 bg-secondary-gray text-charcoal px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-lg">
-                SOON
-              </div>
+              </a>
             </div>
           </div>
           
@@ -696,3 +701,4 @@ function App() {
 }
 
 export default App;
+

@@ -250,16 +250,17 @@ function App() {
             </div>
             
             <div className="relative group w-full sm:w-auto">
-              <a
-                href="/Neurino_Whitepaper.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full sm:w-auto border-2 border-secondary-gray text-secondary-gray px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary-gray/10 hover:border-secondary-gray hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl flex items-center justify-center gap-2 hover:scale-[1.02]"
+              <button 
+                className="w-full sm:w-auto border-2 border-secondary-gray text-secondary-gray px-8 py-4 rounded-full font-bold text-lg opacity-50 cursor-not-allowed shadow-lg flex items-center justify-center gap-2" 
+                disabled
               >
                 <span className="flex items-center justify-center gap-2">
                   📄 Whitepaper
                 </span>
-              </a>
+              </button>
+              <div className="absolute -top-2 -right-2 bg-secondary-gray text-charcoal px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-lg">
+                SOON
+              </div>
             </div>
           </div>
           
